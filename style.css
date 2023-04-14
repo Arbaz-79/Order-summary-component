@@ -1,0 +1,151 @@
+/* css reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Pale-blue);
+}
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+.card {
+  background-color: var(--Very-pale-blue);
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;  
+}
+.img{
+  border-radius: 10px 10px 0 0;
+}
+.heading{
+  margin-top: 1rem;
+  font-weight: 900;
+}
+.sub-heading{
+  padding-inline: 4rem;
+  text-align: center;
+  color: var(--Desaturated-blue);
+
+}
+.price{
+  background-color:#f0f2fd ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.pirce-cn{
+  margin-left: 5rem;
+}
+.price-cn:hover{
+  cursor: pointer;
+  text-decoration: none ;
+}
+.btn{
+  background-color: var(--Bright-blue);
+  padding-inline:5.5rem ;
+  padding-block: .6rem;
+  color: var(--Very-pale-blue);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #d4d0f5 ;
+  margin-block: 1rem;
+  transition: 500ms;
+}
+.btn:hover{
+  background-color:#766CF1 ;
+  cursor: pointer;
+}
+.c-or{
+  margin-bottom: 2rem;
+}
+.c-or:hover{
+  cursor: pointer;
+}
